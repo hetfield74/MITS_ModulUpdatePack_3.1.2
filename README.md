@@ -23,7 +23,7 @@ gegen das Urheberrecht und die GPL und werden zivil- und strafrechtlich verfolgt
 
 ### Installation
 
-Systemvoraussetzung: Funktionsfähige modified eCommerce Shopsoftware ab der Version 2.0.7.0
+Systemvoraussetzung: Funktionsfähige modified eCommerce Shopsoftware ab der Version 3.1.2
 
 Vor der Installation des Moduls sichern sie bitte komplett ihre aktuelle Shopinstallation (Dateien und Datenbank)!
 Für eventuelle Schäden übernehmen wir keine Haftung!
