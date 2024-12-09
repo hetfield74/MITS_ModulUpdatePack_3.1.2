@@ -1,5 +1,5 @@
 # MITS Modul Update Pack für modified eCommerce Shopsoftware 3.1.2
-(c) Copyright 2022 by Hetfield - MerZ IT-SerVice
+(c) Copyright 2024 by Hetfield - MerZ IT-SerVice
 
 - Author: 	Hetfield - https://www.merz-it-service.de
 - Version: 	ab modified eCommerce Shopsoftware ab der Version 3.1.2
