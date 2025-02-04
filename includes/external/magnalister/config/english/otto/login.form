@@ -1,0 +1,17 @@
+{
+    "login": {
+        "headline": "_#_platformName_#_ Access Data",
+        "fields": [
+            {
+                "label": "OTTO API-Token",
+                "key": "_#_platform_#_.token",
+                "desc": "",
+                "type": "extern",
+                "procFunc": "OttoConfigure::OttoGetToken",
+                "params": [
+
+                ]
+            }
+        ]
+    }
+}
