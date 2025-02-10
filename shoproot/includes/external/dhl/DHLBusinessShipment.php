@@ -1,6 +1,6 @@
 <?php
 /* -----------------------------------------------------------------------------------------
-   $Id: DHLBusinessShipment.php 16304 2025-02-05 09:00:00Z GTB $
+   $Id: DHLBusinessShipment.php 16316 2025-02-10 14:32:18Z GTB $
 
    modified eCommerce Shopsoftware
    http://www.modified-shop.org
@@ -141,7 +141,11 @@
         $message = array('ERROR - <b>Code:</b> '.$response->Status->statusCode.' <b>Message:</b> '.$this->encode_message($response->Status->statusText));
       }
       
-      if (isset($message) && isset($response->CreationState->LabelData->Status->statusMessage)) {
+      if (isset($message) 
+          && isset($response->CreationState->LabelData->Status->statusMessage)
+          && is_array($response->CreationState->LabelData->Status->statusMessage)
+          )
+      {
         foreach ($response->CreationState->LabelData->Status->statusMessage as $status_message) {
           if (!isset($message[md5($status_message)])) {
             $message[md5($status_message)] = decode_utf8(encode_utf8($status_message, 'ISO-8859-1', true));
