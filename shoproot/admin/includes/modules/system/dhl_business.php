@@ -1,6 +1,6 @@
 <?php
 /* -----------------------------------------------------------------------------------------
-   $Id: dhl_business.php 16317 2025-02-10 15:02:45Z Tomcraft $
+   $Id: dhl_business.php 16319 2025-02-11 13:50:35Z Tomcraft $
 
    modified eCommerce Shopsoftware
    http://www.modified-shop.org
@@ -25,7 +25,7 @@
     function __construct() {
       global $order;
       
-      $this->version = '1.34';
+      $this->version = '1.35';
       $this->code = 'dhl_business';
       $this->title = MODULE_DHL_BUSINESS_TEXT_TITLE;
       $this->description = MODULE_DHL_BUSINESS_TEXT_DESCRIPTION.'<br><br><br><b>Version</b><br>'.$this->version;

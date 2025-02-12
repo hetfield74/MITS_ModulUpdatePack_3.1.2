@@ -1,6 +1,6 @@
 <?php
 /* -----------------------------------------------------------------------------------------
-   $Id: DHLBusinessShipment.php 16316 2025-02-10 14:32:18Z GTB $
+   $Id: DHLBusinessShipment.php 16318 2025-02-11 11:40:15Z GTB $
 
    modified eCommerce Shopsoftware
    http://www.modified-shop.org
@@ -132,7 +132,8 @@
         
         if (isset($response->Status->statusText)
             && $response->Status->statusText != ''
-            && $this->loglevel != 'NONE'
+            && strtolower($response->Status->statusText) != 'ok'
+            && $this->loglevel == 'INFO'
             )
         {
           $message = array('INFO - <b>Message:</b> '.$this->encode_message($response->Status->statusText));
