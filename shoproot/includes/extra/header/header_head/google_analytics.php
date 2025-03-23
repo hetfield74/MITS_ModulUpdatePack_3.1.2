@@ -1,6 +1,6 @@
 <?php
 /* -----------------------------------------------------------------------------------------
-   $Id: google_analytics.php 16212 2024-12-02 12:09:09Z GTB $
+   $Id: google_analytics.php 16363 2025-03-21 11:09:35Z GTB $
 
    modified eCommerce Shopsoftware
    http://www.modified-shop.org
@@ -151,6 +151,10 @@
 function pushgTagEventAction() {";
         $consentPushCode .= $addCode;
         $consentPushCode .= "
+  dataLayer.push({
+    event: 'consent_ready'
+  });";
+        $consentPushCode .= "
 }";
         $consentPushCode .= $endCode;
       }
@@ -162,6 +166,11 @@ function pushgTagEventAction() {";
     if ($consentAddCode) {
       $output .= $consentAddCode;
     }
+
+    $output .= "
+  dataLayer.push({
+    event: 'consent_ready'
+  });";
 
     if ($addCode) {
       $output .= $addCode;

@@ -1,6 +1,6 @@
 <?php
   /* --------------------------------------------------------------
-   $Id: cookie_consent.php 16240 2024-12-05 20:12:18Z Tomcraft $
+   $Id: cookie_consent.php 16365 2025-03-21 18:48:17Z Tomcraft $
 
    modified eCommerce Shopsoftware
    http://www.modified-shop.org
@@ -26,7 +26,7 @@ if (!class_exists('cookie_consent')) {
     var $_check;
 
     function __construct() {
-      $this->version = '1.47';
+      $this->version = '1.48';
       $this->code = 'cookie_consent';
       $this->title = 'Cookie Consent';
       $this->description = 'Cookie Consent-Modul based on oil.js';
