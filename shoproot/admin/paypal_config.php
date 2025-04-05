@@ -1,6 +1,6 @@
 <?php
 /* -----------------------------------------------------------------------------------------
-   $Id: paypal_config.php 16295 2025-02-03 10:33:12Z GTB $
+   $Id: paypal_config.php 16399 2025-04-02 14:39:00Z GTB $
 
    modified eCommerce Shopsoftware
    http://www.modified-shop.org
@@ -289,6 +289,11 @@ require (DIR_WS_INCLUDES.'head.php');
                 <td class="dataTableConfig col-left"><?php echo TEXT_PAYPAL_CONFIG_MODE; ?></td>
                 <td class="dataTableConfig col-middle"><?php echo xtc_draw_pull_down_menu('config[PAYPAL_MODE]', $mode_array, $paypal->get_config('PAYPAL_MODE')); ?></td>
                 <td class="dataTableConfig col-right"><?php echo TEXT_PAYPAL_CONFIG_MODE_INFO; ?></td>
+              </tr>
+              <tr>
+                <td class="dataTableConfig col-left"><?php echo TEXT_PAYPAL_REMOVE_ORDER_TMP; ?></td>
+                <td class="dataTableConfig col-middle"><?php echo draw_on_off_selection('config[PAYPAL_REMOVE_ORDER_TMP]', $status_array, (($paypal->get_config('PAYPAL_REMOVE_ORDER_TMP') == 1) ? true : false)); ?></td>
+                <td class="dataTableConfig col-right"><?php echo TEXT_PAYPAL_REMOVE_ORDER_TMP_INFO; ?></td>
               </tr>
               <tr>
                 <td class="dataTableConfig col-left"><?php echo TEXT_PAYPAL_CONFIG_INVOICE_PREFIX; ?></td>

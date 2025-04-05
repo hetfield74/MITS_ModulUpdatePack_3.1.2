@@ -1,6 +1,6 @@
 <?php
 /* -----------------------------------------------------------------------------------------
-   $Id: dhl_business.php 16362 2025-03-20 13:28:25Z Tomcraft $
+   $Id: dhl_business.php 16372 2025-03-24 12:36:05Z Tomcraft $
 
    modified eCommerce Shopsoftware
    http://www.modified-shop.org
@@ -25,7 +25,7 @@
     function __construct() {
       global $order;
       
-      $this->version = '1.36';
+      $this->version = '1.38';
       $this->code = 'dhl_business';
       $this->title = MODULE_DHL_BUSINESS_TEXT_TITLE;
       $this->description = MODULE_DHL_BUSINESS_TEXT_DESCRIPTION.'<br><br><br><b>Version</b><br>'.$this->version;
@@ -96,6 +96,10 @@
           }
         }
       }
+      
+      if (defined('MODULE_DHL_BUSINESS_PRODUCT')) {
+        xtc_db_query("DELETE FROM ".TABLE_CONFIGURATION." WHERE configuration_key = 'MODULE_DHL_BUSINESS_PRODUCT'");
+      }
     }
 
     function process($file) {
@@ -133,7 +137,6 @@
       xtc_db_query("INSERT INTO " . TABLE_CONFIGURATION . " (configuration_key, configuration_value, configuration_group_id, sort_order, set_function, date_added) VALUES ('MODULE_DHL_BUSINESS_NOTIFICATION', 'False',  '6', '1', 'xtc_cfg_select_option(array(\'True\', \'False\'), ', now())");
       xtc_db_query("INSERT INTO " . TABLE_CONFIGURATION . " (configuration_key, configuration_value, configuration_group_id, sort_order, set_function, use_function, date_added) VALUES ('MODULE_DHL_BUSINESS_STATUS_UPDATE', '-1',  '6', '1', 'xtc_cfg_get_dhl_orders_status(', 'xtc_get_order_status_name', now())");
       xtc_db_query("INSERT INTO " . TABLE_CONFIGURATION . " (configuration_key, configuration_value, configuration_group_id, sort_order, set_function, date_added) VALUES ('MODULE_DHL_BUSINESS_CODING', 'False',  '6', '1', 'xtc_cfg_select_option(array(\'True\', \'False\'), ', now())");
-      xtc_db_query("INSERT INTO " . TABLE_CONFIGURATION . " (configuration_key, configuration_value, configuration_group_id, sort_order, set_function, date_added) VALUES ('MODULE_DHL_BUSINESS_PRODUCT', 'Paket',  '6', '1', 'xtc_cfg_select_option(array(\'Paket\', \'Warenpost\'), ', now())");
       xtc_db_query("INSERT INTO " . TABLE_CONFIGURATION . " (configuration_key, configuration_value, configuration_group_id, sort_order, set_function, date_added) VALUES ('MODULE_DHL_BUSINESS_DISPLAY_LABEL', 'False',  '6', '1', 'xtc_cfg_select_option(array(\'True\', \'False\'), ', now())");
       xtc_db_query("INSERT INTO " . TABLE_CONFIGURATION . " (configuration_key, configuration_value, configuration_group_id, sort_order, set_function, date_added) VALUES ('MODULE_DHL_BUSINESS_RETOURE', 'False',  '6', '1', 'xtc_cfg_select_option(array(\'True\', \'False\'), ', now())");
       xtc_db_query("INSERT INTO " . TABLE_CONFIGURATION . " (configuration_key, configuration_value, configuration_group_id, sort_order, set_function, date_added) VALUES ('MODULE_DHL_BUSINESS_BULKY', 'False',  '6', '1', 'xtc_cfg_select_option(array(\'True\', \'False\'), ', now())");
@@ -196,7 +199,6 @@
         'MODULE_DHL_BUSINESS_NOTIFICATION',
         'MODULE_DHL_BUSINESS_STATUS_UPDATE',
         'MODULE_DHL_BUSINESS_CODING',
-        'MODULE_DHL_BUSINESS_PRODUCT',
         'MODULE_DHL_BUSINESS_RETOURE',
         'MODULE_DHL_BUSINESS_PERSONAL',
         'MODULE_DHL_BUSINESS_NO_NEIGHBOUR',

@@ -1,6 +1,6 @@
 <?php
 /* -----------------------------------------------------------------------------------------
-   $Id: dhl_business.php 16285 2025-01-23 07:43:15Z Tomcraft $
+   $Id: dhl_business.php 16366 2025-03-24 09:41:06Z GTB $
 
    modified eCommerce Shopsoftware
    http://www.modified-shop.org
@@ -36,8 +36,6 @@
   define('MODULE_DHL_BUSINESS_STATUS_UPDATE_DESC', 'Der Kunde wird per Mail inkl. Trackinginformation benachrichtigt und die Bestellung auf diesen Status gesetzt.');
   define('MODULE_DHL_BUSINESS_CODING_TITLE', 'Leitcodierung');
   define('MODULE_DHL_BUSINESS_CODING_DESC', 'Soll als Standard die Leitcodierung vorausgew&auml;hlt werden?');
-  define('MODULE_DHL_BUSINESS_PRODUCT_TITLE', 'Produkt');
-  define('MODULE_DHL_BUSINESS_PRODUCT_DESC', 'Welches Produkt soll als Standard vorausgew&auml;hlt sein?');
   define('MODULE_DHL_BUSINESS_DISPLAY_LABEL_TITLE', 'Label anzeigen');
   define('MODULE_DHL_BUSINESS_DISPLAY_LABEL_DESC', 'Soll das DHL Label nach Erzeugung angezeigt (Popup) werden?');
   define('MODULE_DHL_BUSINESS_RETOURE_TITLE', 'Retouren Label');

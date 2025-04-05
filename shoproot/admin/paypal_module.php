@@ -1,6 +1,6 @@
 <?php
 /* -----------------------------------------------------------------------------------------
-   $Id: paypal_module.php 16035 2024-07-08 13:55:24Z GTB $
+   $Id: paypal_module.php 16403 2025-04-02 15:52:29Z GTB $
 
    modified eCommerce Shopsoftware
    http://www.modified-shop.org
@@ -213,6 +213,9 @@ if (isset($_GET['action'])) {
 require (DIR_WS_INCLUDES.'head.php');
 ?>
 <link rel="stylesheet" type="text/css" href="../includes/external/paypal/css/stylesheet.css">  
+<style type="text/css">
+  .tableConfig td a.button { font-size: 10px; }
+</style>
 </head>
 <body>
     <!-- header //-->
@@ -384,19 +387,29 @@ require (DIR_WS_INCLUDES.'head.php');
                       <td class="dataTableConfig col-right"><?php echo TEXT_PAYPAL_MODULE_OFFER_SAVE_PAYMENT_INFO; ?></td>
                     </tr>
                     <tr>
-                      <td class="dataTableConfig col-left"><?php echo TEXT_PAYPAL_MODULE_PRODUCT; ?></td>
-                      <td class="dataTableConfig col-middle"><?php echo draw_on_off_selection('config[profile][MODULE_PAYMENT_'.strtoupper($module->code).'_SHOW_PRODUCT]', $status_array, (($paypal->get_config('MODULE_PAYMENT_'.strtoupper($module->code).'_SHOW_PRODUCT') == '1') ? true : false)); ?></td>
-                      <td class="dataTableConfig col-right"><?php echo TEXT_PAYPAL_MODULE_PRODUCT_INFO; ?></td>
-                    </tr>
-                    <tr>
                       <td class="dataTableConfig col-left"><?php echo TEXT_PAYPAL_MODULE_CART_BNPL; ?></td>
                       <td class="dataTableConfig col-middle"><?php echo draw_on_off_selection('config[profile][MODULE_PAYMENT_'.strtoupper($module->code).'_SHOW_CART_BNPL]', $status_array, (($paypal->get_config('MODULE_PAYMENT_'.strtoupper($module->code).'_SHOW_CART_BNPL') == '1') ? true : false)); ?></td>
                       <td class="dataTableConfig col-right"><?php echo TEXT_PAYPAL_MODULE_CART_BNPL_INFO; ?></td>
                     </tr>
                     <tr>
+                      <td class="dataTableConfig col-left"><?php echo TEXT_PAYPAL_MODULE_PRODUCT; ?></td>
+                      <td class="dataTableConfig col-middle"><?php echo draw_on_off_selection('config[profile][MODULE_PAYMENT_'.strtoupper($module->code).'_SHOW_PRODUCT]', $status_array, (($paypal->get_config('MODULE_PAYMENT_'.strtoupper($module->code).'_SHOW_PRODUCT') == '1') ? true : false)); ?></td>
+                      <td class="dataTableConfig col-right"><?php echo TEXT_PAYPAL_MODULE_PRODUCT_INFO; ?></td>
+                    </tr>
+                    <tr>
                       <td class="dataTableConfig col-left"><?php echo TEXT_PAYPAL_MODULE_PRODUCT_BNPL; ?></td>
                       <td class="dataTableConfig col-middle"><?php echo draw_on_off_selection('config[profile][MODULE_PAYMENT_'.strtoupper($module->code).'_SHOW_PRODUCT_BNPL]', $status_array, (($paypal->get_config('MODULE_PAYMENT_'.strtoupper($module->code).'_SHOW_PRODUCT_BNPL') == '1') ? true : false)); ?></td>
                       <td class="dataTableConfig col-right"><?php echo TEXT_PAYPAL_MODULE_PRODUCT_BNPL_INFO; ?></td>
+                    </tr>
+                    <tr>
+                      <td class="dataTableConfig col-left"><?php echo TEXT_PAYPAL_MODULE_BOX_CART; ?></td>
+                      <td class="dataTableConfig col-middle"><?php echo draw_on_off_selection('config[profile][MODULE_PAYMENT_'.strtoupper($module->code).'_SHOW_BOX_CART]', $status_array, (($paypal->get_config('MODULE_PAYMENT_'.strtoupper($module->code).'_SHOW_BOX_CART') == '1') ? true : false)); ?></td>
+                      <td class="dataTableConfig col-right"><?php echo TEXT_PAYPAL_MODULE_BOX_CART_INFO; ?></td>
+                    </tr>
+                    <tr>
+                      <td class="dataTableConfig col-left"><?php echo TEXT_PAYPAL_MODULE_BOX_CART_BNPL; ?></td>
+                      <td class="dataTableConfig col-middle"><?php echo draw_on_off_selection('config[profile][MODULE_PAYMENT_'.strtoupper($module->code).'_SHOW_BOX_CART_BNPL]', $status_array, (($paypal->get_config('MODULE_PAYMENT_'.strtoupper($module->code).'_SHOW_BOX_CART_BNPL') == '1') ? true : false)); ?></td>
+                      <td class="dataTableConfig col-right"><?php echo TEXT_PAYPAL_MODULE_BOX_CART_BNPL_INFO; ?></td>
                     </tr>
                     <?php
                   }

@@ -1,6 +1,6 @@
 <?php
 /* -----------------------------------------------------------------------------------------
-   $Id: 10_paypal.php 16306 2025-02-05 15:23:32Z GTB $
+   $Id: 10_paypal.php 16400 2025-04-02 15:29:16Z GTB $
 
    modified eCommerce Shopsoftware
    http://www.modified-shop.org
@@ -163,7 +163,11 @@
           ';
         }
 
-        if (strpos(basename($PHP_SELF), 'checkout') === false && $_SESSION['cart']->count_contents() > 0) {
+        if ($paypal->get_config('MODULE_PAYMENT_'.strtoupper($paypal->code).'_SHOW_BOX_CART') == '1'
+            && strpos(basename($PHP_SELF), 'checkout') === false
+            && $_SESSION['cart']->count_contents() > 0
+            )
+        {
           $paypalscript .= '
           if ($("#apms_button3").length) {
             paypal.Buttons({
@@ -196,7 +200,7 @@
           ';
         }
 
-        if ($paypal->get_config('MODULE_PAYMENT_'.strtoupper($paypal->code).'_SHOW_CART_BNPL') == '1'
+        if ($paypal->get_config('MODULE_PAYMENT_'.strtoupper($paypal->code).'_SHOW_BOX_CART_BNPL') == '1'
             && strpos(basename($PHP_SELF), 'checkout') === false 
             && $_SESSION['cart']->count_contents() > 0
             )
