@@ -1,6 +1,6 @@
 <?php
 /* -----------------------------------------------------------------------------------------
-   $Id: paypalcart.php 15438 2023-08-21 11:33:20Z GTB $
+   $Id: paypalcart.php 16425 2025-04-30 11:22:35Z GTB $
 
    modified eCommerce Shopsoftware
    http://www.modified-shop.org
@@ -26,13 +26,15 @@
     
     $products = $_SESSION['cart']->get_products();
     for ($i = 0, $n = sizeof($products); $i < $n; $i ++) {
+      $mark_stock = '';
       if (STOCK_CHECK == 'true') {
         $mark_stock = xtc_check_stock($products[$i]['id'], $products[$i]['quantity'], $products[$i]['stock']);
         if ($mark_stock) {
           $_SESSION['any_out_of_stock'] = 1;
         }
       }
-      if (STOCK_CHECK_SPECIALS == 'true' && $xtPrice->xtcCheckSpecial($products[$i]['id'])) {
+      
+      if (empty($mark_stock) && STOCK_CHECK_SPECIALS == 'true' && $xtPrice->xtcCheckSpecial($products[$i]['id'])) {
         $mark_stock = check_stock_specials($products[$i]['id'], $products[$i]['quantity']);
         if ($mark_stock) {
           $_SESSION['any_out_of_stock'] = 1;
@@ -59,4 +61,3 @@
       xtc_redirect(xtc_href_link(FILENAME_SHOPPING_CART, '', 'NONSSL'));
     }
   } 
-?>

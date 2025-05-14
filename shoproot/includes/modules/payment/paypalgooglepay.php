@@ -1,6 +1,6 @@
 <?php
 /* -----------------------------------------------------------------------------------------
-   $Id: paypalgooglepay.php 16291 2025-01-29 09:31:22Z GTB $
+   $Id: paypalgooglepay.php 16424 2025-04-30 11:22:04Z GTB $
 
    modified eCommerce Shopsoftware
    http://www.modified-shop.org
@@ -78,6 +78,18 @@ class paypalgooglepay extends PayPalPaymentV2 {
 
     $error_url = xtc_href_link(FILENAME_CHECKOUT_PAYMENT, 'payment_error='.$this->code, 'SSL');
     
+    $total = $order->info['total'];
+    if (($_SESSION['customers_status']['customers_status_show_price_tax'] == 0 
+         && $_SESSION['customers_status']['customers_status_add_tax_ot'] == 1
+         ) || ($_SESSION['customers_status']['customers_status_show_price_tax'] == 0 
+               && $_SESSION['customers_status']['customers_status_add_tax_ot'] == 0 
+               && $order->delivery['country_id'] == STORE_COUNTRY
+               )
+        ) 
+    {
+      $total += $order->info['tax'];
+    }
+
     $paypalscript = '
     if ($("#apms_button4").length) {
       if (google && paypal.Googlepay) {
@@ -102,7 +114,7 @@ class paypalgooglepay extends PayPalPaymentV2 {
         return {
           countryCode: "'.strtoupper($order->delivery['country']['iso_code_2']).'",
           currencyCode: "'.$order->info['currency'].'",
-          totalPrice: "'.round($order->info['total'], 2).'",
+          totalPrice: "'.sprintf($this->numberFormat, round($total, 2)).'",
           totalPriceStatus: "FINAL",
         };
       }
