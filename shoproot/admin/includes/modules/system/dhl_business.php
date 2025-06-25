@@ -1,6 +1,6 @@
 <?php
 /* -----------------------------------------------------------------------------------------
-   $Id: dhl_business.php 16372 2025-03-24 12:36:05Z Tomcraft $
+   $Id: dhl_business.php 16484 2025-06-20 09:45:17Z Tomcraft $
 
    modified eCommerce Shopsoftware
    http://www.modified-shop.org
@@ -25,7 +25,7 @@
     function __construct() {
       global $order;
       
-      $this->version = '1.38';
+      $this->version = '1.39';
       $this->code = 'dhl_business';
       $this->title = MODULE_DHL_BUSINESS_TEXT_TITLE;
       $this->description = MODULE_DHL_BUSINESS_TEXT_DESCRIPTION.'<br><br><br><b>Version</b><br>'.$this->version;
@@ -169,6 +169,8 @@
       xtc_db_query("INSERT INTO " . TABLE_CONFIGURATION . " (configuration_key, configuration_value, configuration_group_id, sort_order, set_function, date_added) VALUES ('MODULE_DHL_BUSINESS_BIC', '',  '6', '1', '', now())");
 
       $table_array = array(
+        array('table' => TABLE_ORDERS_TRACKING, 'column' => 'date_added', 'default' => 'DATETIME NOT NULL DEFAULT \'0000-00-00 00:00:00\' AFTER parcel_id'), //check for date added for previous versions
+
         array('table' => TABLE_ORDERS_TRACKING, 'column' => 'external', 'default' => 'INT(1) NOT NULL'),
         array('table' => TABLE_ORDERS_TRACKING, 'column' => 'dhl_label_url', 'default' => 'VARCHAR(512) NOT NULL'),
         array('table' => TABLE_ORDERS_TRACKING, 'column' => 'dhl_export_url', 'default' => 'VARCHAR(512) NOT NULL'),
