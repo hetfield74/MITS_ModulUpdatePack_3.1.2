@@ -1,6 +1,6 @@
 <?php
 /* -----------------------------------------------------------------------------------------
-   $Id: paypalpui.php 16220 2024-12-03 11:38:22Z GTB $
+   $Id: paypalpui.php 16476 2025-06-03 13:04:54Z Tomcraft $
 
    modified eCommerce Shopsoftware
    http://www.modified-shop.org
@@ -24,7 +24,7 @@ $lang_array = array(
   'MODULE_PAYMENT_PAYPALPUI_SORT_ORDER_DESC' => 'Reihenfolge der Anzeige. Kleinste Ziffer wird zuerst angezeigt',
   'MODULE_PAYMENT_PAYPALPUI_ZONE_TITLE' => 'Zahlungszone',
   'MODULE_PAYMENT_PAYPALPUI_ZONE_DESC' => 'Wenn eine Zone ausgew&auml;hlt ist, gilt die Zahlungsmethode nur f&uuml;r diese Zone.',
-  'MODULE_PAYMENT_PAYPALPUI_LP' => '<br /><br />F&uuml;r diese Zahlungsart ben&ouml;tigen Sie ein PayPal H&auml;ndler Konto.<br /><a target="_blank" href="http://www.paypal.com/de/webapps/mpp/referral/paypal-business-account2?partner_id=EHALBVD4M2RQS"><strong>Jetzt PayPal Konto hier erstellen.</strong></a>',
+  'MODULE_PAYMENT_PAYPALPUI_LP' => '<br /><br />F&uuml;r diese Zahlungsart ben&ouml;tigen Sie ein PayPal H&auml;ndler Konto.<br /><a target="_blank" href="https://www.paypal.com/business"><strong>Jetzt PayPal Konto hier erstellen.</strong></a>',
 
   'MODULE_PAYMENT_PAYPALPUI_TEXT_EXTENDED_DESCRIPTION' => '<strong><font color="red">ACHTUNG:</font></strong> Bitte nehmen Sie noch die Einstellungen unter "Partner Module" -> "PayPal" -> <a href="'.xtc_href_link('paypal_config.php').'"><strong>"PayPal Konfiguration"</strong></a> vor!',
 
@@ -36,7 +36,8 @@ $lang_array = array(
   'MODULE_PAYMENT_PAYPALPUI_PAYMENT_SOURCE_CANNOT_BE_USED' => 'Die gew&auml;hlte Zahlungsart kann nicht genutzt werden. Diese Entscheidung basiert auf einem automatisierten Datenverarbeitungsverfahren. Weitere Informationen finden Sie in der <a target="_blank" href="https://www.ratepay.com/legal-payment-dataprivacy">Ratepay-Datenschutzerkl&auml;rung</a> oder Sie k&ouml;nnen Ratepay &uuml;ber dieses <a target="_blank" href="https://www.ratepay.com/kontakt">Kontaktformular</a> kontaktieren.',
   'MODULE_PAYMENT_PAYPALPUI_BILLING_ADDRESS_INVALID' => 'Ihre Rechnungsadresse konnte nicht validiert werden.',
   'MODULE_PAYMENT_PAYPALPUI_SHIPPING_ADDRESS_INVALID' => 'Ihre Versandadresse konnte nicht validiert werden.',
-    
+  'MODULE_PAYMENT_PAYPALPUI_MIN_MAX_AMOUNT' => 'Der Gesamtbetrag liegt unter dem Mindest- oder &uuml;ber dem H&ouml;chstbetrag f&uuml;r diese Zahlungsmethode.',
+  
   'MALFORMED_REQUEST_JSON' => 'Die Kombination aus Ihrem Namen und Ihrer Adresse konnte nicht validiert werden. Bitte korrigieren Sie Ihre Daten und versuchen Sie es erneut. Weitere Informationen finden Sie in der <a target="_blank" href="https://www.ratepay.com/legal-payment-dataprivacy">Ratepay-Datenschutzerkl&auml;rung</a> oder Sie k&ouml;nnen Ratepay &uuml;ber dieses <a target="_blank" href="https://www.ratepay.com/kontakt">Kontaktformular</a> kontaktieren.',
 
   'MODULE_PAYMENT_PAYPALPUI_TEXT_DOB' => 'Geburtsdatum (z.B. 21.05.1970):',

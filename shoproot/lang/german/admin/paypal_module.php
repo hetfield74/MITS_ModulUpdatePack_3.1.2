@@ -1,6 +1,6 @@
 <?php
 /* -----------------------------------------------------------------------------------------
-   $Id: paypal_module.php 16443 2025-05-06 16:30:00Z Tomcraft $
+   $Id: paypal_module.php 16467 2025-05-27 10:17:04Z Tomcraft $
 
    modified eCommerce Shopsoftware
    http://www.modified-shop.org
@@ -52,7 +52,7 @@ $lang_array = array(
   'TEXT_PAYPAL_MODULE_BOX_CART_BNPL_INFO' => 'Soll der PayPal Sp&auml;ter bezahlen Button in Warenkorb Box angezeigt werden?',
 
   'TEXT_PAYPAL_MODULE_SAVE_PAYMENT' => 'Zahlart im Checkout speichern (PayPal Vault)',
-  'TEXT_PAYPAL_MODULE_SAVE_PAYMENT_INFO' => 'Soll die f&uuml;r PayPal verwendete Zahlart f&uuml;r einen schnelleren Checkout bei einer weiteren Bestellung gespeichert werden k&ouml;nnen?',
+  'TEXT_PAYPAL_MODULE_SAVE_PAYMENT_INFO' => 'Soll die f&uuml;r PayPal verwendete Zahlart f&uuml;r einen schnelleren Checkout bei einer weiteren Bestellung gespeichert werden k&ouml;nnen?<br><b>Hinweis:</b> Der Ratenzahlungsbanner wird dadurch seitens PayPal deaktiviert.',
 
   'TEXT_PAYPAL_MODULE_OFFER_SAVE_PAYMENT' => 'Gespeicherte Zahlart erlauben (PayPal Vault)',
   'TEXT_PAYPAL_MODULE_OFFER_SAVE_PAYMENT_INFO' => 'Soll eine f&uuml;r PayPal gespeicherte Zahlart f&uuml;r einen schnelleren Checkout erlaubt werden?',

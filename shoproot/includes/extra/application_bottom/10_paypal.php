@@ -1,6 +1,6 @@
 <?php
 /* -----------------------------------------------------------------------------------------
-   $Id: 10_paypal.php 16422 2025-04-29 10:18:18Z GTB $
+   $Id: 10_paypal.php 16465 2025-05-27 09:12:25Z GTB $
 
    modified eCommerce Shopsoftware
    http://www.modified-shop.org
@@ -244,7 +244,10 @@
     {
       $paypal = new PayPalPayment('paypalinstallment');
       
-      if ($paypal->get_config('PAYPAL_INSTALLMENT_BANNER_DISPLAY') == 1) {
+      if ($paypal->get_config('PAYPAL_INSTALLMENT_BANNER_DISPLAY') == 1
+          && $paypal->get_config('MODULE_PAYMENT_PAYPAL_SAVE_PAYMENT') != 1
+          )
+      {
         $total = 0;  
         if (basename($PHP_SELF) == FILENAME_PRODUCT_INFO 
             && is_object($product) 

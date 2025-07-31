@@ -1,6 +1,6 @@
 <?php
 /* -----------------------------------------------------------------------------------------
-   $Id: paypalpui.php 16220 2024-12-03 11:38:22Z GTB $
+   $Id: paypalpui.php 16475 2025-06-03 12:18:24Z GTB $
 
    modified eCommerce Shopsoftware
    http://www.modified-shop.org
@@ -24,7 +24,7 @@ $lang_array = array(
   'MODULE_PAYMENT_PAYPALPUI_SORT_ORDER_DESC' => 'Sort order of the view. Lowest numeral will be displayed first',
   'MODULE_PAYMENT_PAYPALPUI_ZONE_TITLE' => 'Payment zone',
   'MODULE_PAYMENT_PAYPALPUI_ZONE_DESC' => 'If a zone is choosen, the payment method will be valid for this zone only.',
-  'MODULE_PAYMENT_PAYPALPUI_LP' => '<br /><br />For this payment method you need a PayPal merchant account.<br /><a target="_blank" href="http://www.paypal.com/de/webapps/mpp/referral/paypal-business-account2?partner_id=EHALBVD4M2RQS"><strong>Create PayPal account now.</strong></a>',
+  'MODULE_PAYMENT_PAYPALPUI_LP' => '<br /><br />For this payment method you need a PayPal merchant account.<br /><a target="_blank" href="https://www.paypal.com/business"><strong>Create PayPal account now.</strong></a>',
 
   'MODULE_PAYMENT_PAYPALPUI_TEXT_EXTENDED_DESCRIPTION' => '<strong><font color="red">ATTENTION:</font></strong> Please setup PayPal configuration under "Partner Modules" -> "PayPal" -> <a href="'.xtc_href_link('paypal_config.php').'"><strong>"PayPal Configuration"</strong></a>!',
 
@@ -36,7 +36,8 @@ $lang_array = array(
   'MODULE_PAYMENT_PAYPALPUI_PAYMENT_SOURCE_CANNOT_BE_USED' => 'It is not possible to use the selected payment method. This decision is based on automated data processing. You can find further information in the <a target="_blank" href="https://www.ratepay.com/legal-payment-dataprivacy">Ratepay Data Privacy Statement</a> or you can contact Ratepay using this <a target="_blank" href="https://www.ratepay.com/kontakt">contact form</a>.',
   'MODULE_PAYMENT_PAYPALPUI_BILLING_ADDRESS_INVALID' => 'Your billing address could not be validated.',
   'MODULE_PAYMENT_PAYPALPUI_SHIPPING_ADDRESS_INVALID' => 'Your shipping address could not be validated.',
-  
+  'MODULE_PAYMENT_PAYPALPUI_MIN_MAX_AMOUNT' => 'The total amount is below the minimum or above the maximum amount for this payment method.',
+
   'MALFORMED_REQUEST_JSON' => 'It is not possible to use the selected payment method. This decision is based on automated data processing. You can find further information in the <a target="_blank" href="https://www.ratepay.com/legal-payment-dataprivacy">Ratepay Data Privacy Statement</a> or you can contact Ratepay using this <a target="_blank" href="https://www.ratepay.com/kontakt">contact form</a>.',
 
   'MODULE_PAYMENT_PAYPALPUI_TEXT_DOB' => 'Date of birth (e.g. 21/05/1970):',

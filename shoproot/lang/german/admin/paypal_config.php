@@ -1,6 +1,6 @@
 <?php
 /* -----------------------------------------------------------------------------------------
-   $Id: paypal_config.php 16402 2025-04-02 15:40:49Z GTB $
+   $Id: paypal_config.php 16465 2025-05-27 09:12:25Z GTB $
 
    modified eCommerce Shopsoftware
    http://www.modified-shop.org
@@ -64,7 +64,7 @@ $lang_array = array(
   'TEXT_PAYPAL_CONFIG_CART_INFO' => 'Soll der Warenkorb zu PayPal &uuml;bertragen werden?<br/><br/><b>Hinweis:</b> Diese Einstellung kann Probleme bei der Verwendung von ot-Modulen unter "Module" -> "Zusammenfassung" mit sich bringen, die einen Rabatt oder Aufschlag gew&auml;hren ("Rabatt [ot_discount]", "Rabatt Coupons [ot_coupon]", "Gutscheine [ot_gv]", "Rabatt &amp; Zuschlag auf Zahlungsarten [ot_payment]", etc.).<br/>Empfohlene Einstellung: "Nein"',
 
   'TEXT_PAYPAL_INSTALLMENT_BANNER_DISPLAY' => 'Ratenzahlung Banner:',
-  'TEXT_PAYPAL_INSTALLMENT_BANNER_DISPLAY_INFO' => 'Soll das Banner f&uuml;r Ratenzahlung angezeigt werden?<br/><br/><b>Hinweis:</b> PayPal Ratenzahlung ist nur verf&uuml;gbar, sofern Ihr PayPal Konto daf&uuml;r freigeschaltet ist.',
+  'TEXT_PAYPAL_INSTALLMENT_BANNER_DISPLAY_INFO' => 'Soll das Banner f&uuml;r Ratenzahlung angezeigt werden?<br/><br/><b>Hinweis:</b> PayPal Ratenzahlung ist nur verf&uuml;gbar, sofern Ihr PayPal Konto daf&uuml;r freigeschaltet und PayPal Vault inaktiv ist.',
 
   'TEXT_PAYPAL_INSTALLMENT_BANNER_COLOR' => 'Banner Farbe:',
   'TEXT_PAYPAL_INSTALLMENT_BANNER_COLOR_INFO' => 'W&auml;hlen Sie die Farbe f&uuml;r das Banner aus.',

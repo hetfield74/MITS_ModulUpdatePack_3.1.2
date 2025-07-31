@@ -1,6 +1,6 @@
 <?php
 /* -----------------------------------------------------------------------------------------
-   $Id: PayPalPaymentBase.php 16446 2025-05-12 10:46:58Z Tomcraft $
+   $Id: PayPalPaymentBase.php 16514 2025-07-30 10:10:39Z Tomcraft $
 
    modified eCommerce Shopsoftware
    http://www.modified-shop.org
@@ -57,7 +57,7 @@ class PayPalPaymentBase extends PayPalCommon {
     global $order;
 
     $this->code = $class;
-    $this->paypal_version = '1.102';
+    $this->paypal_version = '1.104';
 
     $this->admin_access_array = array(
       'paypal_info',
@@ -1101,7 +1101,7 @@ class PayPalPaymentBase extends PayPalCommon {
                                          FROM ".TABLE_SCHEDULED_TASKS."
                                         WHERE tasks = 'paypal_tracking'");
       if (xtc_db_num_rows($scheduled_query) < 1) {
-        xtc_db_query("INSERT INTO " . TABLE_SCHEDULED_TASKS . " (time_regularity, time_unit, status, tasks) VALUES ('1', 'h',  '0', 'paypal_tracking')");
+        xtc_db_query("INSERT INTO " . TABLE_SCHEDULED_TASKS . " (time_regularity, time_unit, status, tasks) VALUES ('1', 'h',  '1', 'paypal_tracking')");
       }
     }
     
@@ -1614,7 +1614,7 @@ class PayPalPaymentBase extends PayPalCommon {
                                      FROM ".TABLE_SCHEDULED_TASKS."
                                     WHERE tasks = 'paypal_tracking'");
       if (xtc_db_num_rows($check_query) < 1) {                      
-        xtc_db_query("INSERT INTO " . TABLE_SCHEDULED_TASKS . " (time_regularity, time_unit, status, tasks) VALUES ('1', 'h',  '0', 'paypal_tracking')");
+        xtc_db_query("INSERT INTO " . TABLE_SCHEDULED_TASKS . " (time_regularity, time_unit, status, tasks) VALUES ('1', 'h',  '1', 'paypal_tracking')");
       }
     }
     

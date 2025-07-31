@@ -1,6 +1,6 @@
 <?php
 /* -----------------------------------------------------------------------------------------
-   $Id: paypal_module.php 16441 2025-05-06 11:28:15Z GTB $
+   $Id: paypal_module.php 16467 2025-05-27 10:17:04Z Tomcraft $
 
    modified eCommerce Shopsoftware
    http://www.modified-shop.org
@@ -52,7 +52,7 @@ $lang_array = array(
   'TEXT_PAYPAL_MODULE_BOX_CART_BNPL_INFO' => 'Shall the PayPal button be displayed in the box cart?',
 
   'TEXT_PAYPAL_MODULE_SAVE_PAYMENT' => 'Save payment method in the checkout (PayPal Vault)',
-  'TEXT_PAYPAL_MODULE_SAVE_PAYMENT_INFO' => 'Should the payment method used for PayPal be saved for a faster checkout for another order?',
+  'TEXT_PAYPAL_MODULE_SAVE_PAYMENT_INFO' => 'Should the payment method used for PayPal be saved for a faster checkout for another order?<br><b>Note:</b> The installment banner will be deactivated by PayPal.',
 
   'TEXT_PAYPAL_MODULE_OFFER_SAVE_PAYMENT' => 'Allow saved payment method (PayPal Vault)',
   'TEXT_PAYPAL_MODULE_OFFER_SAVE_PAYMENT_INFO' => 'Allow a saved payment method for PayPal for a faster checkout?',
